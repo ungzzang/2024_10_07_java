@@ -2,6 +2,7 @@ package com.green.day02.ch05;
 
 import java.util.Scanner;
 
+
 public class MissionSwitchSolution {
     public static void main(String[] args) {
         // 남성은 172cm, 여성은 159cm 평균
