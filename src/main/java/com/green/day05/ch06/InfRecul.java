@@ -1,4 +1,4 @@
-package com.green.day06.ch06;
+package com.green.day05.ch06;
 
 public class InfRecul {
     public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class InfRecul {
     public static void showHi(int cnt) {
         System.out.println("Hi ~~ ");
         if(cnt == 1){
-            return;
+            return; // 메소드 타입에 맞게 리턴.
         }
         showHi(--cnt);
         //showHi(cnt--); // X ,3이 계속 반복됨, 평행세계의 메소드에 3이 들어가는걸 반복한다고 생각. 뒤에 마이너스 붙어봤자 평행세계랑 상관이없음.

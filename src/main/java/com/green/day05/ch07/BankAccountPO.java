@@ -1,9 +1,10 @@
-package com.green.day06.ch07;
+package com.green.day05.ch07;
 
 public class BankAccountPO {
-    static int balance = 0;
+    static int balance = 0; // static 전역변수 (멤버필드) // 인스턴스 멤버필드는 static 사용안됨.
     // static 전역변수, 선언된 이후부터 중괄호 안에서 끝까지.
     // static 이 붙으면 살아있음. 객체화 작업이 필요없음. 근데 객체는 아님.
+
 
     static int deposit(int amount) { // 입금을 담당하는 메소드
         balance = balance + amount;

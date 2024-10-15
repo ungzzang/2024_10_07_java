@@ -1,9 +1,9 @@
-package com.green.day06.ch06;
+package com.green.day05.ch06;
 
 // 지역 변수
 public class LocalVariable {
 
-    static int aaa = 11; // LocalVariable 중괄호 안에 살아있다.
+    static int aaa = 11; //전역변수 //LocalVariable 중괄호 안에 살아있다.
 
         /*
             Scope(스코프): 변수가 살아있는 범위
@@ -43,7 +43,7 @@ public class LocalVariable {
 
     }
 
-    public static void multiply(int n1){
+    public static void multiply(int n1){ //메소드 안에 있으면 지역변수.
         int num1 = 11;
     }
 

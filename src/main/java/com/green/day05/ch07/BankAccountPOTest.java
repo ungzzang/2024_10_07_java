@@ -1,4 +1,4 @@
-package com.green.day06.ch07;
+package com.green.day05.ch07;
 
 public class BankAccountPOTest {
     public static void main(String[] args) {

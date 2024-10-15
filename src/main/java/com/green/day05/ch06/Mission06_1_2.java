@@ -1,4 +1,4 @@
-package com.green.day06.ch06;
+package com.green.day05.ch06;
 
 public class Mission06_1_2 {
     public static void main(String[] args) {
