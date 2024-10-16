@@ -10,6 +10,10 @@ public class PrimitivaeVsReferenceTest {
 
     public static void main(String[] args) {
         int num = 10;
+
+        //Integer num2 = num; num2에 기능이 생김
+        //num2. 점 찍으면 메소드들이 나옴, 메소드말고 상수도 나올때가 있다. 다른 멤버필드는 안뜸.
+
         changeNum(num);
         System.out.println("num: " + num); // 10
 
@@ -23,7 +27,7 @@ public class PrimitivaeVsReferenceTest {
     /*
         main 메소드에 있는 num 변수(main-num)와 changeNum 메소드에 있는 num 메개변수 (m-num)는
         다른 공간이다. main-num 이 가지고 있는 값을 복사하여 m-num 에 저장했다.
-        m0num 값을 변경한다고 하여 main-num 값이 변경되는 것은 아니다. 왜? 다른 공간이기 때문
+        m0num 값을 변경한다고 하여 main-num 값이 변경되는 것은 아니다. 왜? 다른 공간이기 때문(스코프 다름.)
     */
     public static void changeNum(int num) {
         num = 100; // 10을 받았었는데 100으로 바꿈, 그리고 죽음.
