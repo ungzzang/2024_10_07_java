@@ -18,7 +18,7 @@ public class SystemOutPrintln {
         //kkk(): abc가 가리키고 있는 객체의 메소드, 리턴 메소드 , 리턴타입은 참조타입. // 리턴메소드인 이유는 뒤에 .ggg가 붙어있어서, 참조인 이유는 또 점이있어서
         //ggg: kkk()메소드가 리턴하는 멤버필드, 더이상의 정보 없음.
 
-        System.out.println();
+        System.out.println(); // out 앞에 점이 있고 괄호는 없으니까 static 멤버필드.
 
         PrintStream fff = System.out; //out에 담겨있는 주소값이 fff 라는 지역변수에 똑같이 저장
         fff.println();

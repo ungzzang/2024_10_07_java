@@ -23,7 +23,7 @@ public class StringStudy {
         String str6 = "abcdefghijklmn";
         System.out.println("str6.substring(3): "
                 + str6.substring(3)); //원본은 건들지 않고 새로운 스트링 객체를 만들어 거기에 편집한거 리턴.
-        // 0부터 시작이라서 0,1,2 까지 건너띄고 3부터 시작. //defghijklmn 출력 //substring 은 파일명에서 확장자 추출할 때 사용.
+        // 0부터 시작이라서 0,1,2 까지 건너띄고 3부터 시작. //'defghijklmn' 출력 //substring 은 파일명에서 확장자 추출할 때 사용.
 
         System.out.println("str6.substring(4, 7): "
                 + str6.substring(4, 7)); //efg 3개 뽑힘. 4, 5, 6자리의 문자열 리턴. (7-4=3 이니까 3개 뽑힌다고 알자.)
@@ -54,7 +54,12 @@ public class StringStudy {
         int n = 10;
         String str9 = n + "";
         String str10 = String.valueOf(n); //모든 타입을 String 으로 변경 할 수 있다.
-        System.out.println();
+        System.out.println("--------------------------");
+
+        String str11 = "abcdefgcd";
+        String str11Result = str11.replace("cd", "CD"); // 앞의 cd 를 CD 로 교체.
+        System.out.println("str11Result: " + str11Result);
+
 
     }
 }

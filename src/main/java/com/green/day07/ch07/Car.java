@@ -13,6 +13,8 @@ public class Car {
         this 사용법은 2가지가 있다.
         1. this.  : 멤버필드, 멤버메소드 사용, this. 을 생략 가능할 때가 있다.
         2. this() : 생성자에서 다른 생성자 호출시 사용 가능.
+
+        this 는 나 자신을 가리키는 상수.
      */
 
     public Car() {
@@ -33,7 +35,7 @@ public class Car {
     }
 
     public Car(String gearType, int door) {
-        this("white", gearType, door);
+        this("white", gearType, door); // "white" 처럼 계속 이 값만 나오게 하는것: 하드코딩(기본생성자로 객체 생성시 항상 같은 값이다.)
     }
 
     public void introduce() {

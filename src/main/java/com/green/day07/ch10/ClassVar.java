@@ -2,7 +2,7 @@ package com.green.day07.ch10;
 
 public class ClassVar {
     public static void main(String[] args) {
-        InstCnt.instNum = 10;
+        InstCnt.instNum = 10; //static 이라서 클래스명으로 한거임.
         InstCnt ic1 = new InstCnt(); // 객체 3개 생성.
         InstCnt.instNum = 5;
         InstCnt ic2 = new InstCnt();
