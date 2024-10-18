@@ -2,12 +2,12 @@ package com.green.day08.ch13;
 
 public class ArrayIsInstance2 {
     public static void main(String[] args) {
-        Box[] arr = new Box[5];
+        Box[] arr = new Box[5]; //대괄호 있으면 박스 배열 객체 주소가 담김
         System.out.println(arr.length);
 
         //Box b0, b1, b2, b3, b4;
 
-        Box b1 = new Box("안녕");
+        Box b1 = new Box("안녕"); //대괄호 없으면 박스 객체의 주소가 담김, 대괄호 있는것과는 다르다.
         System.out.println(b1);
         System.out.println(b1.toString());
 

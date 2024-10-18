@@ -11,6 +11,6 @@ public class ArrayDataSwapping {
         arr[0] = arr[2];
         arr[2] = temp;
 
-        System.out.println(Arrays.toString(arr)); //주소값이 아니라 배열값이 나옴.
+        System.out.println(Arrays.toString(arr)); //주소값이 아니라 배열값이 나옴. toString 은 클래스메소드.
     }
 }
