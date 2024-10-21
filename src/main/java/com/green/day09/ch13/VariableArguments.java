@@ -2,7 +2,7 @@ package com.green.day09.ch13;
 
 
 public class VariableArguments {
-    //가변 인수
+    //가변 인수 (가변 인자)
     public static void main(String[] args) {
         sum(10, 22); //32
         //sum 메소드 호출 아규먼트 정수값 2개를 보내고 있다.

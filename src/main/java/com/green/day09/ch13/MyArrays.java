@@ -47,6 +47,7 @@ public class MyArrays {
         return sb.append("]").toString();
     }
 
+    //deep copy
     public static int[] copyOf(int[] arr) {
         int[] arrCopy = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
@@ -54,7 +55,7 @@ public class MyArrays {
         }
         return arrCopy;
 
-        //return copyOf(arr, arr.length); 이렇게 한줄로도 가능하다.
+        //return copyOf(arr, arr.length); 이렇게 한줄로도 가능하다. 밑에 오버로딩 메소드를 호출한다.
     }
 
     public static int[] copyOf(int[] arr, int length) {
