@@ -26,6 +26,7 @@ class Man {
     private String name;
 
     public Man(String name) {
+        super(); //생략해도 자동으로 추가된다.
         this.name = name;
     }
 
@@ -67,7 +68,7 @@ class BusinessMan extends Man{
 
     //오버라이딩: 부모가 가진 메소드를 사용하는 것이 아니라 내가 재정의한 메소드를 사용하게끔 하는 기법
     public void jump() {
-        super.jump(); //super. 을 생략하면 this. 이 되고 나 자신 호출(재귀 호출) 이기 때문에 무한 루프가 된다. //내꺼랑 부모꺼 둘다 하고 싶을때
+        super.jump(); //super. 을 생략하면 this. 이 되고 나 자신 호출(재귀 호출) 이기 때문에 무한 루프가 된다. //내꺼랑 부모꺼 둘다 하고 싶을때(그래서 점선 사이에 2개가 출력된거다.)
         System.out.printf("%s에 다니는 %s이(가) 점프!\n", company, getName()); //getName 앞에 this. , super. 붙여도 상관없다.
         //name 은 private 이기 때문에 바로 접근할 수 없다.
         //public 으로 상속받은 getName 메소드를 호출하여 이름값으로 얻는다.
