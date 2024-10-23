@@ -17,14 +17,16 @@ public class PolyStudy {
         Cat cat = new Cat();
         cat.crying(); //야옹~야옹~
 
+        //Cat cat2 = new Dog(); //형제관계도 형변환 안된다.
+
         Dog dog = new Dog();
         dog.crying();
 
         BullDog bulldog = new BullDog();
         bulldog.crying();
 
-        Bird bird = new Bird();
-        bird.crying();
+        Bird bi = new Bird();
+        bi.crying();
 
         System.out.println("----------------------------");
         //1번 검증
@@ -33,6 +35,7 @@ public class PolyStudy {
         Animal ani3 = new BullDog();
         Animal ani4 = new Bird();
         Dog dog1 = new BullDog();
+        Animal ani5 = dog1;
 
         //2번 검증
         //Bulldog bullDog1 = new Dog(); //불가 - 컴파일 에러 발생
@@ -60,6 +63,10 @@ public class PolyStudy {
         //Animal 은 jump 메소드를 모르기 때문에(존재하지 않기 때문에) 호출할 수 없다.
         ((BullDog)ani3).jump();
         BullDog bullDog4 = (BullDog)ani3;
+
+
+
+        System.out.println("ani3 == bullDog4: " + ani3.equals(bullDog4));
         bullDog4.jump();
 
         System.out.println("===========");
@@ -77,14 +84,42 @@ public class PolyStudy {
         System.out.println(ani4 instanceof BullDog); //false
         System.out.println(ani4 instanceof Bird); //true
 
+
+
+        Cat cat2 = new Cat();
+        Dog dog2 = new Dog();
+        BullDog bullDog2 = new BullDog();
+        Bird bird = new Bird();
+        //동물을 울려주세요
+        //PolyStudy 아래에 있는 메소드
+        //void
+        //static
+        //파라미터는 1개
+        System.out.println(">>>>>>>>>>>>>>");
+        animalCrying(cat2); //야옹 야옹
+        animalCrying(dog2); //멍 멍
+        animalCrying(bullDog2);// 불금 불금, jump() 메소드 호출
+        animalCrying(bird);// 새 새
+
+
         System.out.println("--End--");
     }
+
+    static void animalCrying(Animal ani){
+        ani.crying();
+        if(ani instanceof BullDog) {
+            BullDog bullDog2 = (BullDog) ani;
+            bullDog2.jump();
+        }
+    }
+
 }
 
 class Animal {
     void crying() {
         System.out.println("동물이 운다~");
     }
+
 }
 
 class Cat extends Animal {
@@ -92,13 +127,15 @@ class Cat extends Animal {
     void crying() {
         System.out.println("야옹~야옹~");
     }
+
 }
 
 class Dog extends Animal {
     @Override
     void crying() {
-        System.out.println("망~망~");
+        System.out.println("멍~멍~");
     }
+
 }
 
 class BullDog extends Dog {
@@ -117,4 +154,5 @@ class Bird extends Animal {
     void crying() {
         System.out.println("새~새~");
     }
+
 }

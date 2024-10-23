@@ -4,6 +4,9 @@ public class OverridingToString {
     public static void main(String[] args) {
         Cake c = new Cake();
         System.out.println(c);
+        System.out.println(c.toString()); //바로 윗줄이랑 같은거. toString() 생략가능.
+
+        System.out.println(c.equals(c.toString()));// c랑 c.toString 은 타입이 달라 주소가 다름 . false
         CheeseCake cheeseCake = new CheeseCake();
         System.out.println(cheeseCake);
 
