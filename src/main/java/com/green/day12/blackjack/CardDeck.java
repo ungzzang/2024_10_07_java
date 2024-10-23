@@ -49,14 +49,14 @@ public class CardDeck {
         }
     }
 
-   /* private void shuffle() {
+   /* public void shuffle() {
         for(int i = 0; i < cards.length; i++) {
             int rIdx = (int)(Math.random() * cards.length); //0~51
             Card tmp = cards[i];
             cards[i] = cards[rIdx];
             cards[rIdx] = tmp;
         }
-    }*/ //셔플용 메스드 만든거. 이 메소드 안 만들고 위에서 바로 해도 작동됨.
+    } *///셔플용 메스드 만든거. 이 메소드 안 만들고 위에서 바로 해도 작동됨.
 
 
 
