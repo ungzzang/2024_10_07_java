@@ -59,7 +59,12 @@ public class CardDeck {
     } *///셔플용 메스드 만든거. 이 메소드 안 만들고 위에서 바로 해도 작동됨.
 
 
-
+    //n:1 > "A"
+    //n:2~10 > 그대로 문자열로 만들어서 2 > "2", 3 > "3", 10 > "10"
+    //n:11 > "J"
+    //n:12 > "Q"
+    //n:13 > "K"
+    //나머지값 > ""
     public String getDenomination(int n) {
         if(n < 1 || n > 13) {
             return "";
@@ -76,10 +81,10 @@ public class CardDeck {
 
     //주소값 하나씩 리턴, 리턴 주소값 지워야되고, selectedIdx 이용하여 해결
     public Card draw(){
-        Card c = cards[selectedIdx];
+        Card tmp = cards[selectedIdx]; //tmp 에 잠시 옮겨놓고.
         cards[selectedIdx] = null;
         selectedIdx++;
-        return c;
+        return tmp;
     }
 
     public void checkCard() {
