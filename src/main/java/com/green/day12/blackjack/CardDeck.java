@@ -15,9 +15,9 @@ public class CardDeck {
         //미션1
         // "", "" 값을 가지고 있는 Card 객체를 52개를 만들어 주시고
         //cards 배열에 하나씩 넣어주세요.
-        for(int i = 0; i<cards.length; i++) {//반복문 안에서 new 만들어야 다 다른 주소값이 만들어짐.
+        /*for(int i = 0; i<cards.length; i++) {//반복문 안에서 new 만들어야 다 다른 주소값이 만들어짐.
             cards[i] = new Card("A", "B"); //A(B)
-        }
+        }*/
 
         //미션2
         //모두 다른값을 가지고 있는 Card 객체 만들어서 card 에 순차적으로 넣어주세요.
@@ -42,11 +42,11 @@ public class CardDeck {
             cards[i] = temp;
         }
 
-        //enhanced-for 문으로 card 객체 주소값 전부 출력
+       /* //enhanced-for 문으로 card 객체 주소값 전부 출력
         for(Card c : cards) {
             System.out.println(c); //println 은 문자열을 출력한다. Object 에 있는 toString 메소드로 문자열을 받아서.
             //Card 객체 주소값을 찍고 있어서 Card 에 가서 바꿔야함.
-        }
+        }*/
     }
 
    /* public void shuffle() {
@@ -81,6 +81,9 @@ public class CardDeck {
 
     //주소값 하나씩 리턴, 리턴 주소값 지워야되고, selectedIdx 이용하여 해결
     public Card draw(){
+        if(selectedIdx == 52) {
+            return null;
+        }
         Card tmp = cards[selectedIdx]; //tmp 에 잠시 옮겨놓고.
         cards[selectedIdx] = null;
         selectedIdx++;
@@ -96,3 +99,14 @@ public class CardDeck {
     }
 
 }
+/*
+public Card draw() {
+        if(selectedIdx == 52) {
+            return null;
+        }
+        Card tmp = cards[selectedIdx];
+        cards[selectedIdx] = null;
+        selectedIdx++;
+        return tmp;
+    }
+ */

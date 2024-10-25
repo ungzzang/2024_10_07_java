@@ -2,7 +2,7 @@ package com.green.day12.blackjack;
 
 import java.util.List;
 
-public class CardTest {
+/*public class CardTest {
     public static void main(String[] args) {
 //        CardDeck cd = new CardDeck();
         //cd.shuffle();
@@ -19,12 +19,12 @@ public class CardTest {
 
 
 
-       /* System.out.println(cardDeck.getDenomination(1));  //1
+       *//* System.out.println(cardDeck.getDenomination(1));  //1
         System.out.println(cardDeck.getDenomination(2));    //2
         System.out.println(cardDeck.getDenomination(3));    //3
         System.out.println(cardDeck.getDenomination(12));   //Q
         System.out.println(cardDeck.getDenomination(13));   //K
-        System.out.println(cardDeck.getDenomination(14));*/ //""
+        System.out.println(cardDeck.getDenomination(14));*//* //""
 
 
     }
@@ -43,9 +43,10 @@ class CardTest2 {
         System.out.println("-------------------------------------");
 
         gamer.showYourCards();
+        System.out.println("합계: " + gamer.getPoint()); //point 값이 출력될 수 있도록
 
         List<Card> list = gamer.openCards();
-        System.out.println("open: " + list);
+        //System.out.println("open: " + list);
     }
 }
 
@@ -56,9 +57,20 @@ class CardTest3 {
         dealer.receiveCard(cd.draw());
         dealer.receiveCard(cd.draw());
         dealer.receiveCard(cd.draw());
+        dealer.needMoreCard(cd);
         System.out.println("----------------------------");
-        dealer.showYourCards();
 
+        //dealer.showYourCards();
 
+    }
+}*/
+
+class CardTest4 {
+    public static void main(String[] args) {
+        Rule rule = new Rule();
+        Dealer dealer11 = new Dealer();
+        Gamer gamer11 = new Gamer();
+
+        rule.getWinner(dealer11, gamer11);
     }
 }

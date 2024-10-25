@@ -11,8 +11,8 @@ public class Gamer {
     //멤버필드 선언. 변수명은 cards
 
 
-    private final List<Card> cards;
-    private int point;
+    protected final List<Card> cards;
+    protected int point;
 
     public Gamer() {
         cards = new ArrayList<>();
@@ -21,7 +21,7 @@ public class Gamer {
 
     public void receiveCard(Card c1) {
         //switch expression(스위치 표현)
-        int point = switch(c1.getDenomination()){
+         int point = switch(c1.getDenomination()){
             case "A" -> 1; //옆의 값이 리턴됨.
             case "J", "Q", "K" -> 10;
             default -> Integer.parseInt(c1.getDenomination());
@@ -42,19 +42,23 @@ public class Gamer {
 //            System.out.println(cards.get(i));
 //        } 이렇게 하던가
 
-//        for(int i = 0; i < cards.size(); i++) {
-//            Card item = cards.get(i);
-//            System.out.println(item);
-//         } 이렇게 길게 쓰던가
-
-        for(Card item : cards) { //간결해서 좋음.
+        for(int i = 0; i < cards.size(); i++) {
+            Card item = cards.get(i);
             System.out.println(item);
-        }
-        System.out.println("합: " + point);
+         } //이렇게 길게 쓰던가
+
+//        for(Card item : cards) { //간결해서 좋음.
+//            System.out.println(item);
+//        }
+        //System.out.println("합: " + point);
     }
 
     public List<Card> openCards() {
         return cards;
+    }
+
+    public int getPoint() {
+        return point;
     }
 
 
