@@ -1,8 +1,8 @@
-package com.green.day14.ch17;
+package com.green.BackJoon;
 
 import java.util.Scanner;
 
-public class MyBaekJoon1 {
+public class MinGongBaeSu {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int[] gongbaesu = new int[1000];
