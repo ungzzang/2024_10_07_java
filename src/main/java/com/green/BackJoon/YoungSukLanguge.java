@@ -14,7 +14,8 @@ public class YoungSukLanguge {
             String str5 = scan.next();
 
 
-            for(int i = 0; i < 15; i++) {
+
+            for(int i = 0; i <= 15; i++) {
                 if(i < str1.length()) {
                     System.out.print(str1.substring(i, i + 1));
                 }
