@@ -27,33 +27,26 @@ public class ExceptionCase5 {
         }//모든예외 다 잡음.
 
         System.out.println("---------------------(2)");
-
-        try {
-            System.out.println("a/b ... a?");
-            int n1 = scan.nextInt();
-            System.out.println("a/b ... b?");
-            int n2 = scan.nextInt();
-
-            System.out.printf("%d / %d = %d\n", n1, n2, (n1 / n2));
-        } catch (InputMismatchException | ArithmeticException e) {
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        }
-
-        System.out.println("---------------------(3)");
-
-        try {
-            System.out.println("a/b ... a?");
-            int n1 = scan.nextInt();
-            System.out.println("a/b ... b?");
-            int n2 = scan.nextInt();
-
-            System.out.printf("%d / %d = %d\n", n1, n2, (n1 / n2));
-        } catch (Exception e) { //모든 예외를 다 잡는다. 예외의 최상위 class.
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        }
-        System.out.println("-- 종료 --");
     }
-
 }
+
+//        try {
+//            System.out.println("a/b ... a?");
+//            int n1 = scan.nextInt();
+//            System.out.println("a/b ... b?");
+//            int n2 = scan.nextInt();
+//
+//            System.out.printf("%d / %d = %d\n", n1, n2, (n1 / n2));
+//        } catch (InputMismatchException | ArithmeticException e) {
+//            System.out.println(e.getMessage());
+//            e.printStackTrace();
+//        }
+//            System.out.printf("%d / %d = %d\n", n1, n2, (n1 / n2));
+//        } catch (Exception e) { //모든 예외를 다 잡는다. 예외의 최상위 class.
+//            System.out.println(e.getMessage());
+//            e.printStackTrace();
+//        }
+//        System.out.println("-- 종료 --");
+//    }
+
+//}
