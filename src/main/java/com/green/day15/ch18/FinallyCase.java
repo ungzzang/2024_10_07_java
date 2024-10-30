@@ -33,6 +33,7 @@ class FinallyCase2 {
             Path path = Paths.get("D:/Simple.txt");
             writer = Files.newBufferedWriter(path);
             writer.write("FinallyCase");
+            return; // finally 부터 실행되고 리턴실행됨.
         } catch (IOException e) {
             e.printStackTrace();
         }
