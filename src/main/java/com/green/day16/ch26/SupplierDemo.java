@@ -7,7 +7,7 @@ import java.util.function.Supplier;
 public class SupplierDemo {
     public static void main(String[] args) {
         Supplier<Integer> supRandom = () -> (int)(Math.random() * 50.0); //0~49, () 는 파라미터 없는거
-        Supplier<Integer> supRandom2 = () -> (int)(Math.random() * 31 + 20);
+        Supplier<Integer> supRandom2 = () -> (int)(Math.random() * 31 + 20); //Supplier 의 제네릭은 리턴타입이다. 파라미터 없어서.
 
         System.out.println(supRandom.get()); //리턴으로 공급만 함, get()은 값을 가져온다.
 

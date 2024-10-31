@@ -14,7 +14,7 @@ public class UseAnonymousInner {
             애노테이션이 붙어있다. 이 애노테이션은 2개의 추상메소드가 있으면 컴파일 에러를
             터트린다.
          */
-        Printable p = new Printable() {
+        Printable p = new Printable() { //1회용. 익명클래스.  이름없음.
             @Override
             public void print() {
                 System.out.println("익명클래스 print") ;
@@ -30,7 +30,7 @@ public class UseAnonymousInner {
         //람다식은 추상메소드 하나만 갖고있는 애만 사용가능
         //람다식 만들때 추상메소드 이름 안중요, 파라미터는 중요.
         Printable p2 = () -> {  //print() 괄호 비어서 () 사용,
-            System.out.println("람다 print");
+            System.out.println("람다 print"); //위에 "익명클래스 print" 처럼 같은 효과.
             //Printable p2 = () -> System.out.println("람다 print"); 로 한 줄일때는 줄일수 있음.
         };
         p.print();
