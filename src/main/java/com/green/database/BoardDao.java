@@ -25,13 +25,13 @@ public class BoardDao {
 
             result = ps.executeUpdate(); //쿼리 실행
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace(); //e.getStackTrace(); 이 더 좋지 않을까
         }
 
         return result;
     }
 
-    public List<Board> selBoardList() {
+    public List<Board> selBoardList() { //메소드 타입,명, 쿼리문만 알면 코드 짤수 있어야됨.
         List<Board> list = new ArrayList<>();
         String sql = " SELECT board_id, title, writer, created_at  " +
                      " FROM board  " +
@@ -43,13 +43,14 @@ public class BoardDao {
 
             while(rs.next()) { // 순차적으로 선택, false 뜰때까지 돈다.
                 Board board = new Board();
-                list.add(board);
 
                 board.setBoardId(rs.getInt("board_id"));
                 String title = rs.getString("title");
                 board.setTitle(title);
                 board.setWriter(rs.getString("writer"));
                 board.setCreatedAt(rs.getString("created_at"));
+
+                list.add(board); //여기 넣어도 되고 위에 두번째 줄에 넣어도됨, 어차피 주소라서
             }
 
         } catch (Exception e) {
@@ -59,7 +60,7 @@ public class BoardDao {
     }
 
 
-    public Board selBoardOne(int boardId) {
+    public Board selBoardOne(int boardId) { // 튜플 골라오기
         List<Board> list = new ArrayList<>();
         String sql = " SELECT board_id, title, contents, writer, created_at  " +
                      " FROM board  " +
@@ -71,7 +72,7 @@ public class BoardDao {
             ps.setInt(1, boardId);
             rs = ps.executeQuery();
 
-            while(rs.next()) { // if도 됨
+            while(rs.next()) { // while 대신 if도 됨
                 Board board = new Board();
                 board.setBoardId(rs.getInt("board_id"));
                 String title = rs.getString("title");
